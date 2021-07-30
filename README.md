@@ -1,6 +1,7 @@
 # DIVE
 
 ![GitHub](https://img.shields.io/github/license/cheng-zhao/DIVE.svg)
+![Codacy grade](https://img.shields.io/codacy/grade/b6739a329c4d4e01869ec3c7ea774953.svg)
 
 ## Table of Contents
 
@@ -36,10 +37,10 @@ Please consult the documentations of these dependences for the installation. The
 Once the prerequisites are ready, DIVE can be compiled in the following way:
 
 ```bash
-$ cd /path/with/DIVE.cpp/
-$ /path/to/CGAL/Scripts/scripts/cgal_create_CMakeLists
-$ cmake -DCMAKE_BUILD_TYPE=Release -DCGAL_DIR=/path/to/CGAL -DBOOST_ROOT=/path/to/Boost -DCMAKE_CXX_COMPILER=g++ -DCMAKE_C_COMPILER=gcc
-$ make
+cd /path/with/DIVE.cpp/
+/path/to/CGAL/Scripts/scripts/cgal_create_CMakeLists
+cmake -DCMAKE_BUILD_TYPE=Release -DCGAL_DIR=/path/to/CGAL -DBOOST_ROOT=/path/to/Boost -DCMAKE_CXX_COMPILER=g++ -DCMAKE_C_COMPILER=gcc
+make
 ```
 
 Here, some of the commonly used flags for `cmake` are shown, but they are not always necessary. A comprehensive list of CMake options for DIVE can be found in the [CGAL manual](https://doc.cgal.org/latest/Manual/configurationvariables.html).
