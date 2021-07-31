@@ -14,7 +14,7 @@
 
 **D**elaunay tr**I**angulation **V**oid find**E**r (DIVE) is a tool for identifying all empty spheres that are constrained by four elements of a point set, using the Delaunay Triangulation (DT) technique. In the cosmological context, it is able to resolved all the largest spheres that are empty of tracers, such as galaxies, in either a real survey volume, or a periodic simulation box. These spheres are regarded as a special type of cosmic voids &mdash; DT voids &mdash; which are allowed to overlap with each other.
 
-The size of DT voids statistically represents the density of the dark matter field in the Universe<sup>[\[1\]](#ref1)</sup>. Using the large DT voids, it has been reported for the first time the baryon acoustic oscillation (BAO) signature from under-densities of the Universe<sup>[\[2\]](#ref2)[\[3\]](#ref3)</sup>. This feature is found to encode additional cosmological information, compared to the clustering of galaxies. By combining measurements from galaxies and DT voids, we are able to achieve better cosmological parameter constraints<sup>[\[4\]](#ref4)</sup>. Thus, DIVE is a potentially powerful tool for cosmological studies.
+The size of DT voids statistically represents the density of the dark matter field in the Universe<sup>[\[1\]](#ref1)</sup>. Using the large DT voids, it has been reported for the first time the baryon acoustic oscillation (BAO) signature from under-densities of the Universe<sup>[\[2\]](#ref2)[\[3\]](#ref3)</sup>. This feature is found to encode additional cosmological information, compared to the clustering of galaxies. By combining measurements from galaxies and DT voids, we are able to achieve better cosmological parameter constraints<sup>[\[4\]](#ref4)</sup>. Thus, DIVE is potentially a powerful tool for cosmological studies.
 
 This program is compliant with the C++11 standard, and relies largely on the [Computational Geometry Algorithms Library](https://www.cgal.org/) (CGAL). It is written by Cheng Zhao (&#36213;&#25104;), and is distributed under the [GPLv3 license](LICENSE.txt).
 
@@ -24,7 +24,7 @@ If you use this tool in research work that results in publications, please cite 
 
 ## Compilation
 
-To build DIVE, the CGAL library, as well as its dependencies, has to be previously downloaded or installed, including (see also the [CGAL manual](https://doc.cgal.org/latest/Manual/thirdparty.html) for details)
+To build DIVE, the CGAL library and its dependencies has to be previously downloaded or installed, including (see also the [CGAL manual](https://doc.cgal.org/latest/Manual/thirdparty.html) for details)
 
 -   [CMake](https://cmake.org/)
 -   [GNU Multiple Precision Arithmetic Library](https://gmplib.org/) (GMP)
@@ -32,7 +32,7 @@ To build DIVE, the CGAL library, as well as its dependencies, has to be previous
 -   [Boost library](https://www.boost.org/)
 -   [CGAL](https://www.cgal.org/)
 
-Please consult the documentations of these dependences for the installation. The good news is that recent versions of Boost and CGAL can be used in a "header-only" way, that is to say, it is not necessary to build them.
+Please consult the documentations of these dependences for the installations. The good news is that recent versions of Boost and CGAL can be used in a "header-only" way, that is to say, it is not necessary to build them.
 
 Once the prerequisites are ready, DIVE can be compiled in the following way:
 
@@ -57,7 +57,7 @@ The `DIVE` executable should be run with command line options that specify the i
 | `-l`   | &cross;   | Set the lower boundary of the periodic box (default: 0) |
 | `-u`   | &cross;   | Set the upper boundary of the periodic box              |
 
-Here, the first 3 columns of the input catalogues must be the 3D coordinates of tracers, which are typically in comoving space. The resulting void catalogue contains 4 columns: {*x*<sub>c</sub> , *y*<sub>c</sub> , *z*<sub>c</sub> , *R*<sub>v</sub>}, i.e., coordinates of the void centres, as well as the radius.
+Here, the first 3 columns of the input catalogues must be the 3D coordinates of tracers, which are typically in comoving space. The resulting void catalogue contains 4 columns: {*x*<sub>c</sub> , *y*<sub>c</sub> , *z*<sub>c</sub> , *R*<sub>v</sub>}, i.e., coordinates of the void centres, as well as the radii.
 
 If the upper boundary (*B*<sub>max</sub>) of the periodic box is supplied, the Delaunay Triangulation will be constructed with periodic boundary conditions. In particular, the lower boundary of the box (*B*<sub>min</sub>) is set to 0, if it is not provided specifically. Coordinates of tracers in the periodic box, should be no smaller than the *B*<sub>min</sub>, but less than *B*<sub>max</sub>.
 
